@@ -1,7 +1,17 @@
 # debian-security
 My security configuration for Debian
 
+Partition the system
+
+/
+/boot (rw)
+/home (rw,nosuid,nodev)
+swap
+/var
+/var/log (rw,nosuid,nodev,noexec)
+/var/log/audit (rw,nosuid,nodev,noexec)
+
 sudo grub-mkpasswd-pbkdf2
-git clone https://github.com/konstruktoid/hardening.git.
-nano hardening/ubuntu.cfg
-sudo bash ubuntu.sh
+
+sudo systemctl enable ufwAuto.service
+sudo systemctl start ufwAuto.service
