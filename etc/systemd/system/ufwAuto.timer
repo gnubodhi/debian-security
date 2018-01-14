@@ -1,0 +1,9 @@
+[Unit]
+Description=Run ufwAuto.service every 1 minutes
+
+[Timer]
+OnCalendar=*:0/1
+Unit=ufwAuto.service
+
+[Install]
+WantedBy=multi-user.target
