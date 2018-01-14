@@ -1,0 +1,9 @@
+[Unit]
+Description=Check Is FireWall on/off and Up it is down!
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ufw.sh
+
+[Install]
+WantedBy=multi-user.target
