@@ -16,3 +16,4 @@ sudo grub-mkpasswd-pbkdf2
 sudo systemctl enable ufwAuto.service
 sudo systemctl start ufwAuto.service
 sudo update-grub
+sudo apt install libpam-cracklib
