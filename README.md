@@ -4,7 +4,6 @@ My security configuration for Debian
 Partition the system
 
 /
-
 /boot (rw)
 /home (rw,nosuid,nodev)
 swap
