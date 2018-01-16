@@ -35,6 +35,9 @@ auth [success=ok new_authtok_reqd=ok ignore=ignore user_unknown=bad default=die]
 # (Replaces the `NOLOGINS_FILE' option from login.defs)
 auth       requisite  pam_nologin.so
 
+# Makes sure that the user root can only log into the system from local terminals
+auth     requisite  pam_securetty.so
+
 # SELinux needs to be the first session rule. This ensures that any 
 # lingering context has been cleared. Without out this it is possible 
 # that a module could execute code in the wrong domain.
