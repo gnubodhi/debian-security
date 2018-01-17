@@ -18,3 +18,7 @@ sudo systemctl start ufwAuto.service
 sudo update-grub
 sudo apt install libpam-cracklib ipset
 sudo chmod 700 /boot /etc/{iptables,arptables}
+git clone https://github.com/ilikenwf/pg2ipset.git
+cd pg2ipset
+sudo make
+sudo cp ipset-update.sh /usr/local/bin
