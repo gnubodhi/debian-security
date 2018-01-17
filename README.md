@@ -25,3 +25,4 @@ sudo cp ipset-update.sh /usr/local/bin
 sudo resolvconf -u
 sudo root-hints: "/etc/unbound/root.hints"
 sudo curl -o /etc/unbound/root.hints https://www.internic.net/domain/named.cache
+sudo apt-get -t stretch-backports install linux-image-grsec-amd64
