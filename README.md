@@ -17,3 +17,4 @@ sudo systemctl enable ufwAuto.service
 sudo systemctl start ufwAuto.service
 sudo update-grub
 sudo apt install libpam-cracklib
+sudo chmod 700 /boot /etc/{iptables,arptables}
