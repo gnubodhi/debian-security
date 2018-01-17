@@ -23,3 +23,4 @@ cd pg2ipset
 sudo make
 sudo cp ipset-update.sh /usr/local/bin
 sudo resolvconf -u
+sudo root-hints: "/etc/unbound/root.hints"
