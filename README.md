@@ -26,3 +26,7 @@ sudo resolvconf -u
 sudo root-hints: "/etc/unbound/root.hints"
 sudo curl -o /etc/unbound/root.hints https://www.internic.net/domain/named.cache
 sudo apt-get -t stretch-backports install linux-image-grsec-amd64
+sudo apt install git
+git clone https://github.com/StevenBlack/hosts.git
+cd hosts
+python3 updateHostsFile.py
