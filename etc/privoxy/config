@@ -1,23 +1,25 @@
+user-manual /usr/share/doc/privoxy/user-manual
 confdir /etc/privoxy
-logdir /usr/var/log/privoxy
-logfile privoxy.log
-filterfile default.filter
-filterfile user.filter
-actionsfile match-all.action # Actions that are applied to all sites and may be overruled later on.
+logdir /var/log/privoxy
+actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.
 actionsfile default.action   # Main actions file
-actionsfile user.action      # User customisations
-listen-address :8118
-listen-address [::]:8118
+actionsfile user.action      # User customizations
+filterfile default.filter
+filterfile user.filter      # User customizations
+logfile logfile
+listen-address  127.0.0.1:8118
+listen-address  [::1]:8118
 toggle  1
 enable-remote-toggle  0
 enable-remote-http-toggle  0
 enable-edit-actions 0
 enforce-blocks 0
 buffer-limit 4096
+enable-proxy-authentication-forwarding 0
 forwarded-connect-retries  0
+accept-intercepted-requests 1
 allow-cgi-request-crunching 0
 split-large-forms 0
-handle-as-empty-doc-returns-ok 1
-max-client-connections 256
-debug   4096 # Startup banner and warnings
-debug   8192 # Errors - *we highly recommended enabling this*
+keep-alive-timeout 5
+tolerate-pipelining 1
+socket-timeout 300
