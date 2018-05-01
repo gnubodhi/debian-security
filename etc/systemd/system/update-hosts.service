@@ -1,0 +1,5 @@
+[Unit]
+Description=update-hosts service
+
+[Service]
+ExecStart=/opt/scriptfunction/update-hosts.sh
